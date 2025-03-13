@@ -1,0 +1,563 @@
+body {
+    font-family: "EB Garamond", serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* Stilovi za vremensku crtu */
+.timeline-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.timeline {
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+}
+
+.date h2 {
+    color: #220704;
+    font-size: 24px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.timeline-item:nth-child(even) {
+    justify-content: flex-start;
+}
+
+.timeline-item .content {
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    text-align: left;
+    width: 40%;
+}
+
+.timeline-item .time {
+    color: #D0665A;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: #002147;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    background-color: #002147;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    top: 10px;
+}
+
+.timeline-item .icon {
+    position: absolute;
+    left: calc(40% - 40px); /* Pomakni ikonicu lijevo od crne točke */
+    top: 6px; /* Podesi visinu ikonice */
+    width: 64px;  /* Širina ikonice */
+    height: 64px; /* Visina ikonice */
+    background-image: url("Ikone/ballon.png"); /* Ispravna putanja */
+    background-size: cover; /* Podesi veličinu slike */
+    background-position: center; /* Podesi poziciju slike */
+    background-repeat: no-repeat; /* Onemogući ponavljanje slike */
+}
+.timeline-item .icon1 {
+    position: absolute;
+    right: calc(40% - 50px); /* Pomakni ikonicu lijevo od crne točke */
+    top: 6px; /* Podesi visinu ikonice */
+    width: 64px;  /* Širina ikonice */
+    height: 64px; /* Visina ikonice */
+    background-image: url("Ikone/ballon.png"); /* Ispravna putanja */
+    background-size: cover; /* Podesi veličinu slike */
+    background-position: center; /* Podesi poziciju slike */
+    background-repeat: no-repeat; /* Onemogući ponavljanje slike */
+}
+.timeline-item .icon2 {
+    position: absolute;
+    left: calc(40% - 40px); /* Pomakni ikonicu lijevo od crne točke */
+    top: 6px; /* Podesi visinu ikonice */
+    width: 64px;  /* Širina ikonice */
+    height: 64px; /* Visina ikonice */
+    background-image: url("Ikone/church.png"); /* Ispravna putanja */
+    background-size: cover; /* Podesi veličinu slike */
+    background-position: center; /* Podesi poziciju slike */
+    background-repeat: no-repeat; /* Onemogući ponavljanje slike */
+}
+.timeline-item .icon3{
+    position: absolute;
+    right: calc(40% - 50px); /* Pomakni ikonicu lijevo od crne točke */
+    top: 6px; /* Podesi visinu ikonice */
+    width: 64px;  /* Širina ikonice */
+    height: 64px; /* Visina ikonice */
+    background-image: url("Ikone/disco-ball.png"); /* Ispravna putanja */
+    background-size: cover; /* Podesi veličinu slike */
+    background-position: center; /* Podesi poziciju slike */
+    background-repeat: no-repeat; /* Onemogući ponavljanje slike */
+}
+
+.srce {
+    margin: 0 auto; /* Centriraj element horizontalno */
+    width: 84px;
+    height: 84px;
+    padding: inherit;
+    background-image: url("Ikone/srce.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.invitation {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(12, 14, 13, 0.1);
+}
+
+header {
+    text-align: center;
+}
+
+.bride-groom {
+    width: 450px;
+    height: auto;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.intro, .details, .map, .photo, .rsvp, footer {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.intro p, .details p, .rsvp p, footer p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h2 {
+    font-size: 20px;
+    color: #9e0050;
+    margin-bottom: 10px;
+}
+
+.map img, .photo img {
+    width: 100%;
+    height: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, textarea, button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #A77E58;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #9e0050;
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Dodajte ove stilove u vaš style.css */
+#map-container {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#map-container img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+
+#navigate-button {
+    background-color: #A77E58;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#navigate-button:hover {
+    background-color: #9e0050;
+}
+
+.success-message {
+    display: none;
+    color: green;
+    margin-top: 20px;
+}
+
+.slika {
+background-image: url(Ikone/desno.png);
+padding-right: 5%; 
+background-size: 73px 41px;
+background-position: 100% 240px; 
+background-repeat: no-repeat; 
+padding-left: 5%;
+}
+
+.slika2 {
+background-image: url(Ikone/lijevo.png);
+padding: 50px 0px 20px; 
+margin-bottom: 40px; 
+text-align: center; 
+background-repeat: no-repeat; 
+background-size: 50px 55px;
+}
+
+.intro {
+text-align: center;
+}
+
+
+/* Stilovi za vremensku crtu */
+.timeline-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.timeline {
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+}
+
+.date h2 {
+    font-family: 'Shadows Into Light 400', cursive;
+    color: #9e0050;
+    font-size: 24px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.timeline-item:nth-child(even) {
+    justify-content: flex-start;
+}
+
+.timeline-item .content {
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    text-align: left;
+    width: 40%;
+}
+
+.timeline-item .time {
+    color: #D0665A;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: #002147;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    background-color: #002147;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    top: 10px;
+}
+
+.timeline-item .icon {
+    position: absolute;
+    left: calc(40% - 40px);
+    top: 6px;
+    width: 64px;
+    height: 64px;
+    background-image: url("Ikone/ballon.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.timeline-item .icon1 {
+    position: absolute;
+    right: calc(40% - 50px);
+    top: 6px;
+    width: 64px;
+    height: 64px;
+    background-image: url("Ikone/ballon.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.timeline-item .icon2 {
+    position: absolute;
+    left: calc(40% - 40px);
+    top: 6px;
+    width: 64px;
+    height: 64px;
+    background-image: url("Ikone/church.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.timeline-item .icon3 {
+    position: absolute;
+    right: calc(40% - 50px);
+    top: 6px;
+    width: 64px;
+    height: 64px;
+    background-image: url("Ikone/disco-ball.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.srce {
+    margin: 0 auto;
+    width: 84px;
+    height: 84px;
+    padding: inherit;
+    background-image: url("Ikone/srce.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.invitation {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(12, 14, 13, 0.1);
+}
+
+header {
+    text-align: center;
+}
+
+.bride-groom {
+    width: 450px;
+    height: auto;
+}
+
+
+.intro, .details, .map, .photo, .rsvp, footer {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.intro p, .details p, .rsvp p, footer p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.map img, .photo img {
+    width: 100%;
+    height: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, textarea, button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #A77E58;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #9e0050;
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+#map-container {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#map-container img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+
+#navigate-button {
+    background-color: #A77E58;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#navigate-button:hover {
+    background-color: #9e0050;
+}
+
+.success-message {
+    display: none;
+    color: green;
+    margin-top: 20px;
+}
+
+.slika {
+    background-image: url(Ikone/desno.png);
+    padding-right: 5%;
+    background-size: 73px 41px;
+    background-position: 100% 240px;
+    background-repeat: no-repeat;
+    padding-left: 5%;
+}
+
+.slika2 {
+    background-image: url(Ikone/lijevo.png);
+    padding: 50px 0px 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: 50px 55px;
+}
+
+.intro {
+    text-align: center;
+}
+
+
+/* mobiteli */
+@media only screen and (max-width: 768px) {
+    
+    /* Povećaj osnovnu veličinu fonta */
+    body {
+        font-size: 18px;  /* Povećaj osnovnu veličinu fonta na mobilnim uređajima */
+    }
+
+    /* Povećaj veličinu naslova */
+    h1 {
+        font-size: 2.5rem;  /* Povećaj veličinu H1 naslova */
+    }
+
+    h2 {
+        font-size: 2rem;  /* Povećaj veličinu H2 naslova */
+    }
+
+    /* Povećaj veličinu običnog paragrafa */
+    p {
+        font-size: 1.2rem;  /* Povećaj veličinu fonta za paragrafe */
+    }
+
+    /* Stiliziraj dugmad, npr. za glazbu */
+    .music-btn {
+        padding: 15px 30px;  /* Povećaj padding dugmeta */
+        font-size: 1.2rem;   /* Povećaj veličinu fonta dugmeta */
+    }
+
+    /* Stilovi za formu */
+    input, textarea, button {
+        font-size: 1.1rem;  /* Povećaj veličinu teksta u inputima i formama */
+    }
+}
